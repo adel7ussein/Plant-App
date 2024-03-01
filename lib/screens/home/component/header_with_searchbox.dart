@@ -31,8 +31,10 @@ class HeaderWithSearchBox extends StatelessWidget {
           child: Row(children: [
             Text(
               'Hi Uishopy!',
-              style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                  color: Colors.white, fontWeight: FontWeight.bold),
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineSmall!
+                  .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
             ),
             const Spacer(),
             Image.asset("assets/images/logo.png")
@@ -43,8 +45,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             left: 0,
             right: 0,
             child: Container(
-              margin:
-                  const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+              margin: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
               height: 54,
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -61,11 +62,14 @@ class HeaderWithSearchBox extends StatelessWidget {
                   children: [
                     Expanded(
                       child: TextField(
+                        onTapOutside: (event) {
+                          FocusManager.instance.primaryFocus!.unfocus();
+                        },
                         onChanged: (value) {},
                         decoration: InputDecoration(
                           hintText: "Search",
-                          hintStyle: TextStyle(
-                              color: kPrimaryColor.withOpacity(0.5)),
+                          hintStyle:
+                              TextStyle(color: kPrimaryColor.withOpacity(0.5)),
                           enabledBorder: InputBorder.none,
                           focusedBorder: InputBorder.none,
                           // Suffix(SuffixIcon) is not working properly with SVG
