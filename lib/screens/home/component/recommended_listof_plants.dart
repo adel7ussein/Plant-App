@@ -15,7 +15,7 @@ class RecommendedListOfPlants extends StatelessWidget {
           CustomRecommendPlantCard(
             image: "assets/images/image_1.png",
             title: "Samantha",
-            country: "Russia",
+            country: "America",
             price: 440,
             press: () {},
           ),
@@ -29,7 +29,7 @@ class RecommendedListOfPlants extends StatelessWidget {
           CustomRecommendPlantCard(
             image: "assets/images/image_3.png",
             title: "Samantha",
-            country: "Russia",
+            country: "China",
             price: 440,
             press: () {},
           ),
