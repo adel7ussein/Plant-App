@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/screens/home/component/custom_button.dart';
-import 'package:plant_app/screens/home/component/custom_recommend_plantcard.dart';
 import 'package:plant_app/screens/home/component/header_with_searchbox.dart';
+import 'package:plant_app/screens/home/component/recommended_listof_plants.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -19,15 +19,12 @@ class Body extends StatelessWidget {
             buttonName: 'Recomended',
             press: () {},
           ),
-          CustomRecommendPlantCard(
-            image: "assets/images/image_1.png",
-            title: "Samantha",
-            country: "Russia",
-            price: 440,
-            press: () {},
-          )
+          const RecommendedListOfPlants(),
+          CustomButton(buttonName: "Featured Plants", press: (){})
         ],
       ),
     );
   }
 }
+
+
