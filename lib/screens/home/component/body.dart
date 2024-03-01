@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/screens/home/component/custom_button.dart';
+import 'package:plant_app/screens/home/component/custom_recommend_plantcard.dart';
 import 'package:plant_app/screens/home/component/header_with_searchbox.dart';
 
 class Body extends StatelessWidget {
@@ -14,12 +15,19 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           HeaderWithSearchBox(size: size),
-          CustomButton(buttonName: 'Recomended', press: (){},),
+          CustomButton(
+            buttonName: 'Recomended',
+            press: () {},
+          ),
+          CustomRecommendPlantCard(
+            image: "assets/images/image_1.png",
+            title: "Samantha",
+            country: "Russia",
+            price: 440,
+            press: () {},
+          )
         ],
       ),
     );
   }
 }
-
-
-
